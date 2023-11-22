@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def page_cnn(request):
+    return render(request, 'page_cnn.html')

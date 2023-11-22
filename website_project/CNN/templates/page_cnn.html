@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CNN</title>
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'cnn/css/style.css' %}"
+    />
+  </head>
+  <body>
+    <div class="box_home_title_cnn">
+      <h1 class="home_title_cnn">Welcome to CNN!</h1>
+      <a href="{% url 'home:index' %}">
+        <button>Go to Home</button>
+      </a>
+    </div>
+
+    <div class="container">
+      <!-- Contenu de votre page CNN -->
+    </div>    
+
+    <script>
+      // Ajouter une classe "scrolled" au conteneur lorsque vous faites défiler
+      window.onscroll = function () {
+        document.body.classList.add("scrolled");
+      };
+    </script>
+  </body>
+</html>

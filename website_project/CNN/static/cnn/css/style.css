@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-image: url('background_image.jpg'); 
+    background-size: 120%;
+    background-attachment: fixed;
+    background-position: 0px -149px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Ajoutez une classe spécifique pour la partie où vous voulez faire disparaître l'image lors du défilement */
+.scroll-disappear {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.scroll-disappear.scrolled {
+    opacity: 0;
+}
+
+.home_title_cnn {
+    color: rgb(245, 236, 223);
+}
+
+.box_home_title_cnn {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
