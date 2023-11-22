@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
     <title>CNN</title>
     {% load static %}
     <link
@@ -10,16 +11,18 @@
     />
   </head>
   <body>
-    <div class="box_home_title_cnn">
-      <h1 class="home_title_cnn">Welcome to CNN!</h1>
-      <a href="{% url 'home:index' %}">
-        <button>Go to Home</button>
-      </a>
+    <div class="bg-gradient">
+      <div class="box_home_title_cnn">
+        <h1 class="home_title_cnn">PROJET CNN</h1>
+        <a href="{% url 'home:index' %}">
+          <button class="button-28" role="button">Back to Home</button>
+        </a>
+      </div>
     </div>
 
     <div class="container">
       <!-- Contenu de votre page CNN -->
-    </div>    
+    </div>
 
     <script>
       // Ajouter une classe "scrolled" au conteneur lorsque vous faites défiler
