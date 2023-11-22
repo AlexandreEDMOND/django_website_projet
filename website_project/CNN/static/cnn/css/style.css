@@ -9,9 +9,9 @@ body {
     width: 100vw;
     overflow-x: hidden;
     background-image: url('background_image.jpg');
-    background-size: 120%;
+    background-size: 130%;
     background-attachment: fixed;
-    background-position: 0px -149px;
+    background-position: 0px -150px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
@@ -27,7 +27,6 @@ body {
     background-color: black;
 }
 
-/* Ajoutez une classe spécifique pour la partie où vous voulez faire disparaître l'image lors du défilement */
 .scroll-disappear {
     opacity: 1;
     transition: opacity 0.5s;
@@ -39,6 +38,8 @@ body {
 
 .home_title_cnn {
     color: rgb(245, 236, 223);
+    font-size: 25vh;
+    padding-left: 10vh;
 }
 
 .box_home_title_cnn {
@@ -91,4 +92,17 @@ body {
 .button-28:active {
   box-shadow: none;
   transform: translateY(0);
+}
+
+.box_main_text_cnn {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar_cnn {
+    height: 10%;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
 }
