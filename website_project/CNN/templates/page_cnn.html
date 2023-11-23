@@ -19,7 +19,7 @@
       </div>
 
       <div class="nav-links">
-        <a href="{% url 'cnn:page_cnn' %}">Projet 1</a>
+        <a href="{% url 'cnn:page_cnn' %}">CNN</a>
         <a href="{% url 'home:index' %}">Projet 2</a>
         <a href="{% url 'home:index' %}">Projet 3</a>
         <a href="{% url 'home:index' %}">Projet 4</a>
@@ -28,20 +28,34 @@
     <div class="bg-gradient">
       <div class="box_home_title_cnn">
         <h1 class="home_title_cnn">PROJET CNN</h1>
-        <a href="{% url 'home:index' %}">
-          <button class="button-28" role="button">Back to Home</button>
+        <a>
+          <button
+            class="button-28"
+            onClick="document.getElementById('middle').scrollIntoView();"
+            role="button"
+          >
+            Read More
+          </button>
         </a>
       </div>
     </div>
 
-    <div class="container">
-      <div class="box_main_text_cnn"></div>
+    <div class="container" id="middle">
+      <div class="box_main_text_cnn">test</div>
     </div>
 
     <script>
       window.onscroll = function () {
         document.body.classList.add("scrolled");
       };
+
+      function scrollToContent() {
+        // Récupérer l'élément que vous voulez faire défiler vers
+        var contentElement = document.getElementById("content");
+
+        // Faire défiler la page jusqu'à la position de l'élément
+        contentElement.scrollIntoView({ behavior: "smooth" });
+      }
     </script>
   </body>
 </html>
