@@ -11,14 +11,20 @@
     />
   </head>
   <body>
-    <div class="navbar_cnn">
-        <div>
-            test
-        </div>
-        <div>
-            test
-        </div>
-    </div>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="{% url 'home:index' %}">
+          <img src="{% static 'cnn/css/logo cnn.png' %}" alt="Logo du site" />
+        </a>
+      </div>
+
+      <div class="nav-links">
+        <a href="{% url 'cnn:page_cnn' %}">Projet 1</a>
+        <a href="{% url 'home:index' %}">Projet 2</a>
+        <a href="{% url 'home:index' %}">Projet 3</a>
+        <a href="{% url 'home:index' %}">Projet 4</a>
+      </div>
+    </nav>
     <div class="bg-gradient">
       <div class="box_home_title_cnn">
         <h1 class="home_title_cnn">PROJET CNN</h1>
@@ -29,9 +35,7 @@
     </div>
 
     <div class="container">
-        <div class="box_main_text_cnn">
-
-        </div>
+      <div class="box_main_text_cnn"></div>
     </div>
 
     <script>
