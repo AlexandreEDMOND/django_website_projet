@@ -53,12 +53,25 @@
           J'adore écrire du texte je sais pas pourquoi
         </div>
         <div class="text_box_cnn">
-          <h2>Upload Image</h2>
-
+          <h1>Django File Upload</h1>
           <form method="post" enctype="multipart/form-data">
             {% csrf_token %} {{ form.as_p }}
-            <button class="button-28" type="submit">Upload</button>
+            <button type="submit">Submit</button>
           </form>
+          <hr />
+          <ul>
+            {% for document in documents %}
+            <li>
+              <a href="{{ document.upload_file.url }}"
+                >{{ document.upload_file.name }}</a
+              >
+              <small
+                >({{ document.upload_file.size|filesizeformat }}) -
+                {{document.upload_date}}</small
+              >
+            </li>
+            {% endfor %}
+          </ul>
         </div>
       </div>
     </div>

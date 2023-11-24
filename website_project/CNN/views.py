@@ -1,15 +1,16 @@
-from django.shortcuts import render, redirect
-from .forms import ImageUploadForm
+from django.shortcuts import render
+from django.views.generic.edit import CreateView
+from django.urls import reverse_lazy
+from .models import Upload
 
 def page_cnn(request):
     return render(request, 'page_cnn.html')
 
-def upload_image(request):
-    if request.method == 'POST':
-        form = ImageUploadForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('home')  # Redirigez vers la page d'accueil ou toute autre page souhaitée après le téléchargement.
-    else:
-        form = ImageUploadForm()
-    return render(request, 'upload_image.html', {'form': form})
+class UploadView(CreateView):
+    model = Upload
+    fields = ['upload_file', ]
+    success_url = reverse_lazy('fileupload')
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['documents'] = Upload.objects.all()
+        return context
