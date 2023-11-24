@@ -22,4 +22,3 @@ urlpatterns = [
     path('home/', include('home_page.urls')),
     path('cnn/', include('CNN.urls')),
 ]
-
